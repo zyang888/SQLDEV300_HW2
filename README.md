@@ -2,7 +2,7 @@
 
 ## 1. Manually create a sample JSON file
 
-![Image of JSON File](/images/jsonfile.png)
+![Image of JSON File](/images/jsonFile.png)
 
 ## 2. Create the SQL statements needed to generate such a JSON automatically and correctly
 
@@ -28,4 +28,4 @@ Use the line below to filter out the noise and construct JSON file.
 `$res | Select-Object -Property County, State, LastDay, Delta |  ConvertTo-Json -Depth 1 | Out-File -FilePath $fileName`
 
 ## 6. Describe (in a couple paragraphs) a hypothetical use for this JSON report/export
-Great lesson to process data and generate report using JSON to store and transfer data.
+Great lesson to process data and generate report using JSON to store and transfer data. It can be used in cases where server handles client request to get and process data. The JSON file can be later used to (1) construct new table on SQL server, and (2) transmitted to the client for post-processing and visualization. 
